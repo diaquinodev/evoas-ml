@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Callback Mercado Livre</title>
+</head>
+<body>
+  <h2>✅ Autorização concluída!</h2>
+  <p>Copie o código abaixo e cole no terminal:</p>
+  <pre id="code">Carregando...</pre>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("code");
+    if (code) {
+      document.getElementById("code").textContent = code;
+      console.log("Código:", code);
+    } else {
+      document.getElementById("code").textContent = "Nenhum código encontrado.";
+    }
+  </script>
+</body>
+</html>
